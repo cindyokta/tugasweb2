@@ -14,14 +14,14 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('index.php/admin/dashboard')?>">
+        <a class="nav-link" href="<?= base_url('admin/dashboard')?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
 
       <!-- Nav Item - Admin -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url('index.php/admin/akun_admin')?>">
+        <a class="nav-link" href="<?= base_url('admin/akun_admin')?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Admin</span></a>
       </li>

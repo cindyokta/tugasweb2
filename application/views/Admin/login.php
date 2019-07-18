@@ -31,6 +31,9 @@
       <div class="col-xl-5 col-lg-12 col-md-9">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
+
+          <?php echo $this->session->flashdata('message'); ?>
+
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -42,7 +45,7 @@
                   </div>
                   <form class="user" action="" method="POST">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="account" name="account" aria-describedby="emailHelp" placeholder="Enter Email or Username..." value="<?= set_value('account') ?>">
+                      <input type="text" class="form-control form-control-user" id="account" name="account" aria-describedby="emailHelp" placeholder="Enter Email or Username..." value="<?= set_value('account') ?>">
 
                       <?= form_error('account', '<small class="text-danger">', '</small>') ?>
 

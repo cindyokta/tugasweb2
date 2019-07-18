@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/projekuasweb2';
+// $config['base_url'] = 'http://localhost/projekuasweb2';
+$config['base_url'] = 'http://localhost/tugasweb2/tugasweb2/';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,7 @@ $config['base_url'] = 'http://localhost/projekuasweb2';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
