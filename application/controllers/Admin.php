@@ -9,25 +9,6 @@ class Admin extends CI_Controller {
 		$this->load->model('M_Admin', 'admin');
 	}
 
-	private function _setAlert($status = NULL, $message = NULL)
-	{
-	    if ($status == 'success')
-	    {
-	        // For success alert
-	        return $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong> '. $message .'</div>');
-	    }
-	    elseif ($status == 'warning')
-	    {
-	        // For warning alert
-	        return $this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Warning!</strong> '. $message .'</div>');
-	    }
-	    else
-	    {
-	        // For danger alert
-	        return $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Danger!</strong> '. $message .'</div>');
-	    }
-	}
-
 	public function index()
 	{
 		if ($this->session->has_userdata('logged_in')) {
@@ -203,5 +184,24 @@ class Admin extends CI_Controller {
 		$this->admin->hapus_admin($id_admin);
 		$this->_setAlert('success', 'Data has been deleted.');
 		redirect('admin/akun_admin');
+	}
+
+	private function _setAlert($status = NULL, $message = NULL)
+	{
+	    if ($status == 'success')
+	    {
+	        // For success alert
+	        return $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong> '. $message .'</div>');
+	    }
+	    elseif ($status == 'warning')
+	    {
+	        // For warning alert
+	        return $this->session->set_flashdata('message', '<div class="alert alert-warning alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Warning!</strong> '. $message .'</div>');
+	    }
+	    else
+	    {
+	        // For danger alert
+	        return $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible" style="margin-bottom:5px;"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Danger!</strong> '. $message .'</div>');
+	    }
 	}
 }
